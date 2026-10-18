@@ -16,8 +16,8 @@ jobs:
       run:
         working-directory: backend
     env:
-      PYTHONPATH: .
-      DATABASE_URL: sqlite:///:memory:
+      PYTHONPATH: '.'
+      DATABASE_URL: "sqlite:///:memory:"
 
     steps:
       - name: Check out repository
@@ -46,7 +46,7 @@ jobs:
       run:
         working-directory: frontend
     env:
-      VITE_API_URL: http://127.0.0.1:8000
+      VITE_API_URL: 'http://127.0.0.1:8000'
 
     steps:
       - name: Check out repository
